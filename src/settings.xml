@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <!--配置本地仓库目录，默认在 用户目录/.m2 下-->
+  <localRepository>D:\maveRepo</localRepository>
+  
+  <pluginGroups></pluginGroups>
+
+  <proxies></proxies>
+
+  <servers></servers>
+
+  <!--由于中央仓库在国外，网络不稳定，需配置中央仓库的镜像仓库-->
+  <mirrors>
+    <mirror>
+      <id>maven.net.cn</id>
+      <mirrorOf>central</mirrorOf>
+      <name>central mirror in china.</name>
+      <url>http://maven.net.cn/content/groups/public</url>
+    </mirror>
+  </mirrors>
+
+  <profiles></profiles>
+
+</settings>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion><!--xml模式 版本-->
+ 
+ 
+    <!--坐标信息，用于被依赖-->
+    <groupId>com.saoraozhe.mavenDemo</groupId><!--项目名-->
+    <artifactId>mavenDemo</artifactId><!--部件名-->
+    <version>1.0</version>
+	
+    <!--项目说明信息-->
+	<name>mavenDemo</name>
+	<url>www.baidu.com</url>
+	<description>description</description>
+	<licenses>MIT</licenses>
+	<organization>saoraozhe</organization>
+	
+	<!--打包方式-->
+	<packaging>jar</packaging><!--war zip jar pom-->
+	
+	<!--本部件依赖的其他部件列表-->
+    <dependencies>
+	    <dependency><!--依赖部件可以来自本地仓库、maven中央仓库-->
+		    <groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.10</version>
+			<!---->
+			<option></option>
+		</dependency>
+	</dependencies>
+ 
+    <!--配置构建行为-->
+    <build>
+	   <plugins><!--插件列表-->
+	      <plugin><!--指定插件-->
+		      <groupId>org.apache.maven.plugins</groupId>
+		      <artifactId>maven-source-plugin</artifactId>
+		      <version>2.4</version>
+		      <executions><!--指定插件执行的阶段、参数-->
+		          <execution>
+			          <phase>package</phase>
+				      <goals>
+				          <goal>jar-no-fork</goal>
+				      </goals>
+			      </execution>
+		      </executions>
+		  </plugin>	      
+	   </plugins>
+	</build>
+	
+	
+</project>
